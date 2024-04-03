@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    font-family: "Nunito", sans-serif;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body > video{
+    opacity: 25%;
+    margin: 0;
+    position: fixed;
+    max-width: 100%;
+}
+
+/*Estilização da parte esquerda da Area de Login*/
+
+.area-login{
+    width: 60%;
+    height: 50%;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10%;
+    color: #3b3b3b;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    transition: .29s;
+}
+
+/*Estilização lado esquerdo do Login*/
+
+.intro {margin: 5%; position: relative;}
+.intro > h1 {font-size: 30px;}
+.intro .tp-cadastro{margin-top: 50%;}
+
+.intro > i{
+    position: fixed;
+    font-size: 30px;
+    margin-top: -1%;
+    transition: .4s;
+}
+.intro > i:hover{
+    color: #78ff67;
+}
+
+/*Estilização lado direito*/
+
+.area-login .form{
+    position: relative;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.form h2{
+    font-weight: bold;
+    margin: 20px 0px 10px;
+}
+.input-class{
+    border: hidden;
+    border-radius: 4px;
+    height: 7%;
+    width: 130%;
+    padding: 5px;
+}
+.input-class:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+.input-class:placeholder{
+    border-bottom: solid 1px; 
+    padding: 2px;
+}
+.btn-login{
+    margin-top: 25%;
+    background-color: #0f9b6c;
+    padding: 5px;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    height: 42px;
+    width: 100px;
+    transition: .4s;
+}
+.btn-login a{
+    color: white;
+    text-decoration: none;
+}
+.btn-login:hover{
+    background-color: #13bb56;
+}
+
+/*Região de Ativamento de funções de alternação entre Login e Cadastro*/
+
+section.area-login.expandir{
+    height: 70%;
+    opacity: 0;
+}
+div.intro.expandir{
+    bottom: 100%;
+}
+.form.expandir{
+    bottom: 100%;
+}
+section.area-cadastro.expandir{
+    background-color: white;
+    height: 70%;
+    width: 60%;
+    z-index: 999;
+    opacity: 1;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+}
+
+.log-text.expandir{
+    cursor: pointer;
+}
+
+/*Estilização do Cadastro*/
+
+.area-cadastro{
+    position: fixed;
+    opacity: 0%;
+    width: 0%;
+    height: 50%;
+    transition: .2s;
+}
+
+.iptClass{
+    border: solid .1px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 8px;
+}
+
+.log-text{
+    cursor: default;
+}
+
+.logicText p{
+    margin-left: 280px;
+    margin-top: 300px;
+    text-align: center;
+}
+
+.center-cadastro{
+    position: relative;
+    opacity: 1;
+    transition: .28s;
+}
