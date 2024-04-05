@@ -94,13 +94,16 @@ body > video{
     height: 42px;
     width: 100px;
     transition: .4s;
+    cursor: pointer;
 }
 .btn-login a{
     color: white;
     text-decoration: none;
+    
 }
 .btn-login:hover{
     background-color: #13bb56;
+    cursor: pointer;
 }
 
 /*Região de Ativamento de funções de alternação entre Login e Cadastro*/
@@ -145,6 +148,7 @@ section.area-cadastro.expandir{
     border-radius: 4px;
     width: 100%;
     padding: 8px;
+    
 }
 
 .log-text{
