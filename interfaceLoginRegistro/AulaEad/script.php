@@ -14,7 +14,15 @@ if($connect->connect_error){
 }
 else
 {
-    ///echo "Conexão bem-sucedida!";
+   // echo "Conexão bem-sucedida!";
+    $sql= "SELECT * FROM aluno ";
+
+
+    
+    $result = $connect->query($sql);
+
+  // print_r($result); 
+
 }
 
 

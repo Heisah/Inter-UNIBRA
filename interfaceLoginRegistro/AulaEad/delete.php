@@ -1,6 +1,6 @@
 <?php
 if (!empty($_GET['id'])) {
-    include_once('script.php');
+    include_once('AulaEad/script.php');
 
     $id = $_GET['id'];
 
@@ -27,7 +27,7 @@ if (!empty($_GET['id'])) {
 
         // Verifica se a exclusão foi bem-sucedida antes de redirecionar
         if ($resultDelete) {
-            header('Location: sistema.php');
+            header('Location: AulaEad/perfil.php');
         } else {
             echo "Erro ao excluir o registro: " . $connect->error;
         }

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #444444;
+    transition: .3s;
+}
+
+/*Estilização do Cabeçalho*/
+header{
+    box-shadow: 0px 0px 10px 5px rgb(58, 58, 58);
+    background-color: #1c1c1c;
+    margin-left: 5%;
+    width: 20%;
+    height: 100px;
+    overflow: hidden;
+    justify-content: space-around;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    color: #000;
+    padding: 2px;
+    align-items: center;
+} 
+
+/*Estilização da Logo do site*/
+header .logo{
+    margin: 5px;
+    color: #ffffff;
+    cursor: default;
+}
+.logo span{
+    background-image: linear-gradient( to bottom,  rgb(35, 141, 255) 14.7%, rgb(91, 51, 199) 88.7% );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    cursor: default;
+}
+
+/*Estilização do botão de saída*/
+header .container-sair-btn a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #ffffff00;
+    border-radius: 7px;
+    padding: 10px;
+    transition: .3s;
+}
+header .container-sair-btn a:hover{
+    box-shadow: 0px 0px 7px 3px rgba(216, 216, 216, 0.466);
+}
+
+/*Estilização de título e features*/
+section.monitorGeral .titulo{
+    margin: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+section.monitorGeral .titulo a{
+    text-decoration: none;
+    transition: .3s;
+    font-size: 35px;
+    opacity: 30%;
+}
+section.monitorGeral .titulo a:hover{
+    color: rgb(35, 141, 255);
+    opacity: 100%;
+}
+
+
+/* Estilização dos containers */
+section.monitorGeral *{
+    color: #e8e8e8;
+}
+
+section .container-monitores{
+    align-items: center;
+    /*border: dashed 0.8px;*/
+    margin: 100px;
+}
+
+section .container-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .container-graficos{
+    margin: 100px;
+    height: 500px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 5px rgb(49, 49, 49);
+    border-radius: 10px;
+}
+
+/*ESTILIZAÇÃO GERAL DO LADO ESQUERDO DO UPLOAD*/
+section .container-graficos .container-left-upload{
+    padding: 20px;
+    margin-left: 5%;
+    height: 400px;
+    width: 500px;
+
+    background-color: #fff;
+    color: #000;
+    
+    border-radius: 5px;
+}
+.container-left-upload input{
+    height: 20px;
+    width: 400px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.container-left-upload h1{
+    color: #000;
+}
+.container-left-upload select{
+    padding: 3px;
+
+    color: #000;
+    border-radius: 2px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.container-left-upload .button-upload{
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+    transition: .3s;
+
+    background-color: rgb(0, 205, 237);
+    border-radius: 5px;
+    border: none;
+    color: #212121;
+
+    font-size: 16px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.container-left-upload .button-upload:hover{
+    background-color: rgb(68, 230, 255);
+    box-shadow: 0px 0px 6px 1px rgb(84, 232, 255);
+    width: 105px;
+}
+
+
+/*ESTILIZAÇÃO GERAL DO LADO DIREITO DO UPLOAD*/
+section .container-graficos .container-right-upload{
+    margin: 5%;
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+    color: #000;
+}
+
+
+
+

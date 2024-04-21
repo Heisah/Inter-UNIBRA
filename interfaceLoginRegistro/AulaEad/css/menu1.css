@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 900%;
+}
+
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: rgb(110, 200, 110);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 rgb(99, 154, 99);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+nav.menu-lateral:hover {
+    width: 250px;
+}
+
+.btn-expandir > i {
+    color: #000000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: .2s;
+}
+
+ul li.ativo {
+    background-color: rgb(99, 154, 99);
+}
+
+ul li.item-menu:hover {
+    background: rgb(99, 154, 99);
+}
+
+ul li.item-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 30px; 
+}
+
+ul li.item-menu a .txt-link { 
+    margin-left: 34px; 
+}
+
+ul li.item-menu a .icon > i {   
+    font-size: 30px;
+}
+
+
+
+/*APOSTILAS */
+
+/* TEXTO NA ESQUERDA E IMAGEM NA DIREITA */
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+.container2 {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    
+    
+}
+
+.texto {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.texto > h1 {
+    margin-left: 120px;
+    font-size: 60pt;
+}
+.container2 .texto2 > p {
+    margin-left: 120px;
+    font-size: 20pt;
+    padding: 15px;
+
+    text-align: center;
+}
+
+.container2 .texto2 > h2 {
+    margin-left: 120px;
+    font-size: 20pt;
+    padding: 15px;
+    padding-right: 20px;
+  
+
+    
+}
+.texto > p {
+    margin-left: 120px;
+    font-size: 30pt;
+   
+}
+
+.imagem {
+    flex: 1;
+    text-align: right;
+}
+
+.imagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Produtos das Apostilas */
+.destaques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.produto {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.produto h2 {
+    margin-top: 10px;
+}
+
+.produto p {
+    margin-top: 5px;
+    color: #888;
+}
+
+.produto .preco {
+    font-size: 18px;
+    color: #f00;
+    margin-top: 10px;
+}
+
+/*pesquisar */
+
+  .box-search {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Alinhar o conteúdo à direita */
+            padding: 20px;
+           
+        }
+
+        .form-control {
+            width: 500px;
+            border-radius: 5px;
+            height: 30px;
+            
+            margin-right: 10px; /* Espaçamento entre o campo de pesquisa e o botão */
+        }
+
+        .btn-bonito {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-bonito:hover {
+            background-color: #0056b3;
+        }
+
+
+        .box-search {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; /* Alinhar o conteúdo à direita */
+            padding: 20px;
+           
+        }
+
+        .form-control {
+            width: 500px;
+            border-radius: 5px;
+            height: 30px;
+            
+            margin-right: 10px; /* Espaçamento entre o campo de pesquisa e o botão */
+        }
+
+        .btn-bonito {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-bonito:hover {
+            background-color: #0056b3;
+        }
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 360px) { /* Tamanho aproximado do Samsung Galaxy S8 */
+    nav.menu-lateral {
+        width: 40px;
+        padding: 10px 0 20px 1%;
+    }
+
+    nav.menu-lateral:hover {
+        width: 150px;
+    }
+
+    .btn-expandir {
+        padding-left: 5px;
+    }
+
+    ul li.item-menu a {
+        font-size: 14px;
+        padding: 10px 4%;
+    }
+
+    ul li.item-menu a .txt-link { 
+        margin-left: 27px;
+    }
+
+    ul li.item-menu a .icon > i {   
+        font-size: 16px;
+    }
+
+    .form-control {
+        width: 150px;
+        border-radius: 5px;
+        height: 25px;
+        margin-right: 10px; /* Espaçamento entre o campo de pesquisa e o botão */
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center; /* Centralizar o conteúdo na vertical */
+        text-align: center; /* Centralizar o conteúdo na horizontal */
+    }
+
+    .texto > h1 {
+        font-size: 16pt;
+        margin-left: 60px;
+        text-align: center;
+    }
+
+    .texto > p {
+        margin-top: 10px;
+        font-size: 12pt;
+        margin-left: 70px;
+        text-align: left;
+    }
+
+
+        
+
+    
+}
+
+
+    /* responsivo do pesquisar */
+@media screen and (max-width: 720px) {
+  
+
+    .form-control {
+        width: 200px; 
+        border-radius: 5px;
+        height: 30px;
+        margin-right: 10px; 
+    }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Nutri</title>
+    <link rel="stylesheet" href="css/menu1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ <!-- DEIXAR O BOTÃO DE PESQUISA BONITO-->
+   
+    
+</head>
+<body>
+
+    <!-- MENU LATERAL DO SITE-->
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class=""></i>
+        </div>
+        <ul> 
+            <li class="item-menu"> 
+                <a href="aula.html">
+                    <span class="icon"> <i class="bi bi-mortarboard-fill"></i></span>
+                    <span class="txt-link"> Aulas </span>
+                </a> 
+            </li>
+            <li class="item-menu ativo"> 
+                <a href="apostilas.html">
+                    <span class="icon"><i class="bi bi-book"></i> </span>
+                    <span class="txt-link"> Apostilas </span>
+                </a> 
+            </li>
+            <li class="item-menu"> 
+                <a href="live.html">
+                    <span class="icon"> <i class="bi bi-camera-reels"></i> </span>
+                    <span class="txt-link">Lives </span>
+                </a> 
+            </li>
+            <li class="item-menu"> 
+                <a href="#">
+                    <span class="icon"> <i class="bi bi-gear"></i></span>
+                    <span class="txt-link">Configurações </span>
+                </a> 
+            </li>
+            <li class="item-menu"> 
+                <a href="perfil.php">
+                    <span class="icon"> <i class="bi bi-person-circle"></i></span>
+                    <span class="txt-link">Perfil </span>
+                </a> 
+            </li>
+        </ul>
+    </nav>
+
+
+   <!-- Texto na esquerda e Imagem na direita-->
+   <div class="container">
+    <div class="texto">
+        <br>
+        <h1>Apostilas Digital para nutrição  ATUALIZADA</h1>
+        <p>  provas,atualizações,testes simulados e muito mais!</p>
+    </div>
+    <div class="imagem">
+        <img src="imagem/nutri-gif.svg" alt="Imagem à Direita">
+    </div>
+</div>
+
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+  </svg>
+  
+ 
+
+  <div class="box-search">
+    <input type="search" class="form-control" placeholder="Pesquisar" id="pesquisar">
+    <button onclick="searchData()" class="btn btn-bonito">  
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+    </svg>
+        </button>
+</div>
+
+   
+
+ <!-- Produtos em Destaque -->
+ <div class="destaques">
+    
+    <div class="produto">
+        <img src="imagem/apo1.png" alt="Produto 1">
+        <h2>Produto 1</h2>
+        <p>Descrição do Produto 1</p>
+        <p class="preco">$19.99</p>
+    </div>
+    <div class="produto">
+        <img src="imagem/apo2.jpg" alt="Produto 2">
+        <h2>Produto 2</h2>
+        <p>Descrição do Produto 2</p>
+        <p class="preco">$29.99</p>
+    </div>
+    <div class="produto">
+        <img src="imagem/apo3.png" alt="Produto 3">
+        <h2>Produto 3</h2>
+        <p>Descrição do Produto 3</p>
+        <p class="preco">$39.99</p>
+    </div>
+
+    <div class="produto">
+        <img src="imagem/apo3.png" alt="Produto 3">
+        <h2>Produto 3</h2>
+        <p>Descrição do Produto 4</p>
+        <p class="preco">$199.99</p>
+    </div>
+
+    <div class="produto">
+        <img src="imagem/apo3.png" alt="Produto 3">
+        <h2>Produto 3</h2>
+        <p>Descrição do Produto 5</p>
+        <p class="preco">$339.99</p>
+    </div>
+
+    <div class="produto">
+        <img src="imagem/apo5.png" alt="Produto 1">
+        <h2>Produto 1</h2>
+        <p>Descrição do Produto 1</p>
+        <p class="preco">$19.99</p>
+    </div>
+
+    
+    <div class="produto">
+        <img src="imagem/apo1.png" alt="Produto 1">
+        <h2>Produto 1</h2>
+        <p>Descrição do Produto 1</p>
+        <p class="preco">$19.99</p>
+    </div>
+    <div class="produto">
+        <img src="imagem/apo3.png" alt="Produto 3">
+        <h2>Produto 3</h2>
+        <p>Descrição do Produto 3</p>
+        <p class="preco">$39.99</p>
+    </div>
+   
+
+</div>
+
+
+    <script src="js/menu.js"></script>
+<script>var search = document.getElementById('pesquisar');
+
+    search.addEventListener("keydown",function(event){ // vai analisar se a tecla que eu cliquei foi enter, e se for ele vai colocar no id do site
+      if (event.key ==="Enter"){
+        searchData();
+      }
+    });
+    
+    function searchData()
+    {
+      window.location = 'sistema.php?search='+search.value;
+    }
+    
+    
+    </script>
+    
+</body>
+</html>
