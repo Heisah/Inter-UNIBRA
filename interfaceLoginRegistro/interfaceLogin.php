@@ -2,21 +2,7 @@
 // Verifica se o formulário foi submetido
 if(isset($_POST['submit'])){
     session_start();
-    // Testando se todos os inputs estão sendo pegos
-    /*
-    print_r('usuario: ' .$_POST['usuario']);
-    print_r('<br>');
-    print_r('nome: ' .$_POST['nome']);
-    print_r('<br>');
-    print_r('email: '.$_POST['email']);
-    print_r('<br>');
-    print_r('CPF: '.$_POST['CPF']);
-    print_r('<br>');
-    print_r('genero: '.$_POST['genero']);
-    print_r('<br>');
-    print_r('estado: '.$_POST['estado']);
-    print_r('<br>');
-*/
+  
     // Inclui o arquivo de conexão com o banco de dados
     include_once('AulaEad/script.php');
 
@@ -44,9 +30,9 @@ if(isset($_POST['submit'])){
 
 <!-- TESTE PARA MANDAR MENSAGEM CASO DEU CERTO E PARA IMPEDIR QUE ENTRE SEM DEIXAR OS DOIS CAMPO -->
 <?php 
-if(!empty($_GET['msg'])){
+if(!empty($_GET['msg='])){
     
-    if (!empty($_GET['msg'] == "OK")){
+    if (!empty($_GET['msg='] == "OK")){
         ?>
        
        <div class="alert-info" role="alert"> <!--  deixe verde com o css-->
@@ -56,7 +42,7 @@ if(!empty($_GET['msg'])){
         
         <?php 
     }
-        else if($_GET['msg'] == "ERROR"){
+        else if($_GET['msg='] == "ERROR"){
             ?>
             <div class="alert-info" role="alert"> <!-- deixe vermelho com o css  -->
             <?php echo "<script> Email ou Senha incorreta! </script>"; ?>
@@ -81,7 +67,7 @@ if(!empty($_GET['msg'])){
 <html lang="en">
 <head>
     <!-- Link para o Estilo CSS da página -->
-    <link rel="stylesheet" type="text/css" href="estiloLogin.css">
+    <link rel="stylesheet" type="text/css" href="estiloLogin1.css">
 
     <!-- Link para BootsTrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">

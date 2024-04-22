@@ -83,7 +83,7 @@ body > video{
     padding: 2px;
 }
 .btn-login{
-    margin-top: 25%;
+    margin-top: 10%;
     background-color: #0f9b6c;
     padding: 5px;
     border: transparent;
@@ -109,7 +109,7 @@ body > video{
 /*Região de Ativamento de funções de alternação entre Login e Cadastro*/
 
 section.area-login.expandir{
-    height: 70%;
+    height: 60%;
     opacity: 0;
 }
 div.intro.expandir{
@@ -120,7 +120,7 @@ div.intro.expandir{
 }
 section.area-cadastro.expandir{
     background-color: white;
-    height: 70%;
+    height: 100%;
     width: 60%;
     z-index: 999;
     opacity: 1;
@@ -147,7 +147,7 @@ section.area-cadastro.expandir{
     border: solid .1px;
     border-radius: 4px;
     width: 100%;
-    padding: 8px;
+    padding: 2px;
     
 }
 

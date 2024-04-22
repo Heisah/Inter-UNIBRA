@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   
+    <title>Sistema</title>
+    <style>
+  /* Estilo geral para a classe Perfil */
+  .Perfil {
+    /* Margem externa para separar a seção do resto da página */
+    margin: 30px;
+    margin-left: 30px;
+    margin-right: 10px;
+    /* Preenchimento para adicionar espaço interno */
+    padding: 20px;
+    /* Fundo para dar contraste */
+    background-color: #f5f5f5;
+ 
+  
+    /* Borda arredondada para suavizar as bordas */
+    border-radius: 10px;
+    /* Alinhamento de texto para centralizar */
+    text-align: center;
+    /* Sombras para adicionar profundidade */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    /* Fonte para dar estilo ao texto */
+    font-family: 'Arial', sans-serif;
+    /* Cor do texto */
+    color: #333;
+  }
+
+  .Perfil h1 {
+    /* Cor do texto do cabeçalho */
+    color: #333;
+    /* Fonte para o cabeçalho */
+    font-size: 40px;
+    /* Peso da fonte para tornar o texto mais proeminente */
+    font-weight: bold;
+  }
+
+ 
+
+ 
+
+.esquerdo {
+  /* opcional: você pode definir um tamanho fixo ou percentual */
+  flex: 1; 
+
+}
+
+
+.direito {
+  margin-top: -300px;
+  margin-left: 900px;
+  flex: 1;
+  text-align: left; /* Alinha o texto no bloco à direita */
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<link rel="stylesheet" href="css/perfil1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- MENU LATERAL DO SITE-->
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class=""></i>
+        </div>
+        <ul> 
+            <li class="item-menu"> 
+                <a href="aula.php">
+                    <span class="icon"> <i class="bi bi-mortarboard-fill"></i></span>
+                    <span class="txt-link"> Aulas </span>
+                </a> 
+            </li>
+            <li class="item-menu"> 
+                <a href="apostilas.html">
+                    <span class="icon"><i class="bi bi-book"></i> </span>
+                    <span class="txt-link"> Apostilas </span>
+                </a> 
+            </li>
+            <li class="item-menu"> 
+                <a href="live.html">
+                    <span class="icon"> <i class="bi bi-camera-reels"></i> </span>
+                    <span class="txt-link">Lives </span>
+                </a> 
+            </li>
+            <li class="item-menu ativo"> 
+                <a href="configuração.html">
+                    <span class="icon"> <i class="bi bi-gear"></i></span>
+                    <span class="txt-link">Configurações </span>
+                </a> 
+            </li>
+            <li class="item-menu"> 
+                <a href="perfil.php">
+                    <span class="icon"> <i class="bi bi-person-circle"></i></span>
+                    <span class="txt-link">Perfil </span>
+                </a> 
+            </li>
+        </ul>
+    </nav>
+    <div class="container mt-5">
+        <h1>Configurações</h1>
+
+        <!-- Configurações de Notificações -->
+        <section class="configuracoes-notificacoes mt-5">
+            <h2>Notificações</h2>
+            <form action="salvarNotificacoes.php" method="post">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="email_notificacoes" name="email_notificacoes" checked>
+                    <label para="email_notificacoes" class="form-check-label">Receber notificações por e-mail</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="sms_notificacoes" name="sms_notificacoes">
+                    <label para="sms_notificacoes" class="form-check-label">Receber notificações por SMS</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+            </form>
+        </section>
+
+        <!-- Configurações de Privacidade -->
+        <section class="configuracoes-privacidade mt-5">
+            <h2>Privacidade</h2>
+            <p>Gerencie suas configurações de privacidade.</p>
+            <form action="salvarPrivacidade.php" method="post">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="compartilhar_dados" name="compartilhar_dados">
+                    <label para="compartilhar_dados" class="form-check-label">Permitir compartilhamento de dados com terceiros</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="publico" name="publico">
+                    <label para="publico" class="form-check-label">Tornar minhas informações públicas</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Configurações</button>
+            </form>
+        </section>
+
+        <!-- Link para voltar ao perfil -->
+        <a href="perfil.php" class="btn btn-secondary mt-5">Voltar para Perfil</a>
+    </div>
+
+
+
+</html>

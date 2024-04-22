@@ -73,14 +73,15 @@ section.monitorGeral .titulo a:hover{
 
 
 /* Estilização dos containers */
-section.monitorGeral *{
-    color: #e8e8e8;
+/*section.monitorGeral *{
+    color: #e8e8e8;  ficou transparente o texto 
 }
-
+*/
 section .container-monitores{
     align-items: center;
     /*border: dashed 0.8px;*/
     margin: 100px;
+    
 }
 
 section .container-grid{
@@ -90,15 +91,17 @@ section .container-grid{
 }
 
 section .container-graficos{
-    margin: 100px;
-    height: 500px;
-    width: 1200px;
+    margin: 90px;
+    height: 700px;
+    width: 1000px;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 0px 0px 7px 5px rgb(49, 49, 49);
     border-radius: 10px;
+  
 }
 
 /*ESTILIZAÇÃO GERAL DO LADO ESQUERDO DO UPLOAD*/
@@ -107,8 +110,9 @@ section .container-graficos .container-left-upload{
     margin-left: 5%;
     height: 400px;
     width: 500px;
+    margin-bottom: 10px;
 
-    background-color: #fff;
+   /* background-color: #fff; */
     color: #000;
     
     border-radius: 5px;
@@ -118,7 +122,7 @@ section .container-graficos .container-left-upload{
     width: 400px;
     padding: 5px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .container-left-upload h1{
     color: #000;

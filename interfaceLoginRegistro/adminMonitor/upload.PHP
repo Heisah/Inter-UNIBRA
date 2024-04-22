@@ -18,13 +18,16 @@ else
         // Prepara os dados recebidos do formulário
         $titulo = $_POST['titulo'];
         $link = $_POST['link'];
+        $postador = $_POST['postador'];
+        $data = $_POST['data_publicao'];
     
         // Prepara a consulta SQL para inserção de dados
-        $sql = "INSERT INTO aulas (titulo, link) VALUES ('$titulo', '$link')";
+        $sql = "INSERT INTO aulas (titulo, link, postador, data_publicacao) VALUES ('$titulo', '$link','$postador','$data')";
     
         // Executa a consulta SQL
         if ($connect->query($sql) === TRUE) {
             echo "Aula inserida com sucesso.";
+            header('location:360Uploads.html');
         } else {
             echo "Erro ao inserir aula" .$connect->error;
         }
@@ -33,4 +36,4 @@ else
     }
 }
 
-?>
+

@@ -34,7 +34,7 @@ CREATE TABLE `aluno` (
   `genero` varchar(45) NOT NULL,
   `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `aluno` (
 
 LOCK TABLES `aluno` WRITE;
 /*!40000 ALTER TABLE `aluno` DISABLE KEYS */;
-INSERT INTO `aluno` VALUES (9,'admin@@@','adm','admin@localhost.com','123.123.123-12','adminadmin','outro','PE'),(10,'TESTE','teste','EXAMPLE@gmail.com','123.123.123-12','cfcd208495','masculino','PE');
+INSERT INTO `aluno` VALUES (9,'admin@@@','adm','admin@localhost.com','123.123.123-12','adminadmin','outro','PE'),(12,'jad','jad','EXAMPLE@gmail.com','123.123.123-12','1','masculino','BH'),(13,'professor','aaa','apolinario@gmail.com','123.123.123-12','2','masculino','PA'),(14,'Teste','Teste','EXAMPLE@gmail.com','123.123.123-12','1','feminino','AC'),(15,'ultimotest','the paiaman man','paia@gmail.com','123.123.123-12','2','masculino','testes');
 /*!40000 ALTER TABLE `aluno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -68,6 +68,34 @@ CREATE TABLE `ao-vivo` (
 LOCK TABLES `ao-vivo` WRITE;
 /*!40000 ALTER TABLE `ao-vivo` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ao-vivo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `aulas`
+--
+
+DROP TABLE IF EXISTS `aulas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `aulas` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
+  `postador` varchar(45) NOT NULL,
+  `data_publicacao` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `aulas`
+--
+
+LOCK TABLES `aulas` WRITE;
+/*!40000 ALTER TABLE `aulas` DISABLE KEYS */;
+INSERT INTO `aulas` VALUES (1,'Nutrição Básica 1','https://www.youtube.com/embed/TvnQMk_FqqU?si=duQT1sBg7mOuL9Yh','teste testado','teste','2023-03-02'),(10,'Nutrição Básica 2','https://www.youtube.com/embed/QhIBNpe9Wk0?si=Cz7p7-oWPzvITTvc','antonio','eduardo','2023-03-03'),(11,'Nutrição Básica 3','https://www.youtube.com/embed/-X9vv4M3wSg?si=SvqZqGO9SADkVk21','','antonio','2023-03-04'),(12,'Nutrição Básica Introdução','https://www.youtube.com/embed/1XIBBulCW7M?si=swrbREpXIuwVrGf1','aaaaaaaa','antonio','2023-03-01'),(13,'Nutrição Básica 4','https://www.youtube.com/embed/INBKxfpVM1U?si=bR5viuZCivHi2_vp','','antonio','2023-03-05');
+/*!40000 ALTER TABLE `aulas` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -191,7 +219,7 @@ CREATE TABLE `professor` (
   `genero` varchar(45) NOT NULL,
   `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,7 +228,7 @@ CREATE TABLE `professor` (
 
 LOCK TABLES `professor` WRITE;
 /*!40000 ALTER TABLE `professor` DISABLE KEYS */;
-INSERT INTO `professor` VALUES (1,'professor','teste','a@gmail.com','[123.123.123-34]','446','masculino','PE');
+INSERT INTO `professor` VALUES (1,'professor','teste','a@gmail.com','[123.123.123-34]','446','masculino','PE'),(2,'	\r\neduardo','	\r\neduardo','	\r\neduardo@gmail.com','123.123.123.123-12','6','outro','cergipe'),(22,'paia','antonio','	\r\neduardo@gmail.com','123.123.123.123-12','6','outro','cergipe');
 /*!40000 ALTER TABLE `professor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -245,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-05 20:15:20
+-- Dump completed on 2024-04-21 21:50:07

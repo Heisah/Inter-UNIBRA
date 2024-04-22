@@ -21,7 +21,7 @@ WHERE id ='$id'";
 $result = $connect->query($sqlUpdate);
 if ($result === TRUE) { // um if para verificar se o registro funcionou ou não
     echo "Registro atualizado com sucesso!";
-    header('Location: sistema.php');
+    header('Location: perfil.php');
 
 } else {
     echo "Erro ao atualizar registro: " . $connect->error;

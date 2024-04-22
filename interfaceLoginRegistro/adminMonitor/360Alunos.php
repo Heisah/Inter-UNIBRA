@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitor 360</title>
+    <title>Administração</title>
 
 
 
@@ -93,11 +93,11 @@
     <header id="hdn" class="hdn">
 
         <!--Logo do Site-->
-        <h1 class="logo">Monitor <span>360</span></h1>
+        <h1 class="logo">Admin <span>360</span></h1>
 
         <!--Elemento sair do painel Administrativo-->
         <div class="container-sair-btn">
-            <a href="#">Sair</a>
+            <a href="sair.php" >Sair</a>
         </div>
 
     <!--Fim do Cabeçalho-->

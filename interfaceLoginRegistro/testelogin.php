@@ -1,57 +1,41 @@
 <?php
 session_start();
 include_once('AulaEad/script.php');
-// Se o formulário foi submetido com email e senha preenchidos
-if(isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha'])) {
- 
 
+if (isset($_POST['submit']) && !empty($_POST['usuario']) && !empty($_POST['senha'])) {
     // Obter os valores do formulário
-    $id = $user_data['id'];
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
-  
 
-    // Consultar o SQL para verificar se o email e a senha existem no banco de dados
-    $sql = "SELECT * FROM aluno WHERE usuario = '$usuario' AND senha = '$senha'";
-    $result = $connect->query($sql);
+    // Usar uma consulta segura para prevenir SQL Injection
+    $sql = "SELECT * FROM aluno WHERE usuario = ? AND senha = ?";
+    $stmt = $connect->prepare($sql);
+    $stmt->bind_param("ss", $usuario, $senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-
-
-
-    // Se não houver resultados para aluno, redirecionar para a página de login
-    if(mysqli_num_rows($result) < 1){
+    if ($result->num_rows < 1) {
+        // Se não houver resultados para o aluno, redirecionar para a página de login
         unset($_SESSION['usuario']);
         unset($_SESSION['senha']);
-        header('Location: interfaceLogin.php?msg=TRUE');
-         header("Location: interfaceLogin.php?msg=ERROR");
-    } 
-    else 
-    {
-        // Se houver resultados para aluno, redirecionar para a página do sistema
-        $_SESSION['usuario'] = $usuario;
-        $_SESSION['senha'] = $senha;
-        $_SESSION['nome'] = $nome;
-        $_SESSION['id'] = $id;
-        echo "funciona";
-        header("Location: AulaEad/perfil.php");
-        
-        //header('Location: sistema.php');
-     
-    }
+        header("Location: interfaceLogin.php?msg=ERROR");
+    } else {
+        // Se houver resultados, configurar a sessão com dados do usuário
+        $user_data = $result->fetch_assoc();
+        $_SESSION['usuario'] = $user_data['usuario'];
+        $_SESSION['senha'] = $user_data['senha'];
+        $_SESSION['nome'] = $user_data['nome'];
+        $_SESSION['id'] = $user_data['id'];
 
-}
-else 
-{
-    // Se o formulário não foi submetido corretamente, redirecionar de volta para a página de login
+        // Verifica se o usuário é admin para redirecionar
+        if ($_SESSION['usuario'] === 'admin@@@') {
+            header("Location: adminMonitor/index.php");
+        } else {
+            header("Location: AulaEad/perfil.php");
+        }
+    }
+} else {
+    // Se o formulário não foi submetido corretamente, redirecionar para a página de login
     header("Location: interfaceLogin.php?msg=ERROR");
 }
 ?>
-
-<?php session_start(); ?>
-<?php if($_SESSION['usuario'] == 'admin@@@'){
-    header("Location: adminMonitor/index.php");
-}
-
-?>
-
-
